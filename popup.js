@@ -1,10 +1,12 @@
 let timeClear;
+let milli = 0;
 let second = 0;
 let minute = 0;
 let hour = 0;
 
 function startTimer() {
   timeClear = setInterval(function() {
+   
     second++;
     document.getElementById('t_sec').innerHTML = second < 10 ? '0' + second : second;
 
@@ -21,7 +23,7 @@ function startTimer() {
 
         document.getElementById('t_min').innerHTML = minute < 10 ? '0' + minute : minute;
     }
-
+  
   }, 1000);
 }
 
@@ -41,4 +43,3 @@ document.getElementById('start_btn').addEventListener('click', function() {
 
   document.getElementById('testing').textContent = '으아아아아악!!!!'
 });
-
